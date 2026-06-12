@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Access USA Loan services instantly — simple redirect page.">
+  <title>USA Loan | Instant Access</title>
+  <style>
+    /* ----- RESET & GLOBAL ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #ffffff;          /* pure white background */
+      font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Noto Sans', sans-serif;
+      color: #111111;
+      line-height: 1.4;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-rendering: optimizeSpeed;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* main centered container */
+    .loan-container {
+      max-width: 720px;
+      width: 90%;
+      margin: 2rem auto;
+      padding: 1rem;
+      text-align: center;
+      background: transparent;
+    }
+
+    /* title styling — dark, strong, modern */
+    .loan-title {
+      font-size: clamp(2.8rem, 9vw, 4.8rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #0a0a0a;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+      text-shadow: none;
+    }
+
+    /* description paragraph — clean and readable */
+    .loan-description {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #2c2c2c;
+      margin-bottom: 2.5rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5;
+    }
+
+    /* ----- DARK THEME BUTTON (large, rounded, interactive) ----- */
+    .loan-button {
+      display: inline-block;
+      background-color: #121212;    /* deep dark base */
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 600;
+      padding: 1rem 2.6rem;
+      border-radius: 60px;          /* extra rounded corners */
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      border: none;
+      transition: all 0.25s ease-in-out;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+      letter-spacing: 0.3px;
+      backdrop-filter: blur(0px);
+      line-height: 1.2;
+      margin-top: 0.5rem;
+    }
+
+    /* HOVER ANIMATION EFFECT (lift + deeper shadow + background refinement) */
+    .loan-button:hover {
+      background-color: #1f1f1f;
+      transform: translateY(-3px);
+      box-shadow: 0 20px 28px -10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* active / click feedback */
+    .loan-button:active {
+      transform: translateY(1px);
+      transition: all 0.08s linear;
+      background-color: #0a0a0a;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    /* focus ring for accessibility (keyboard users) */
+    .loan-button:focus-visible {
+      outline: 3px solid #121212;
+      outline-offset: 4px;
+      border-radius: 60px;
+    }
+
+    /* ensures the button is always easy to tap on mobile */
+    @media (max-width: 640px) {
+      .loan-button {
+        font-size: 1.3rem;
+        padding: 0.85rem 2rem;
+        width: auto;
+        min-width: 220px;
+      }
+      .loan-description {
+        font-size: 1.05rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    /* extra small devices: keep large tap area */
+    @media (max-width: 480px) {
+      .loan-button {
+        font-size: 1.25rem;
+        padding: 0.8rem 1.8rem;
+        width: 90%;
+        max-width: 300px;
+      }
+      .loan-title {
+        margin-bottom: 0.75rem;
+      }
+      .loan-container {
+        width: 92%;
+      }
+    }
+
+    /* perfect centering on tall screens */
+    @media (min-height: 700px) {
+      body {
+        align-items: center;
+      }
+    }
+
+    /* optional ultra-lightweight entry animation (not required but modern) */
+    .loan-title, .loan-description, .loan-button {
+      animation: fadeSlideUp 0.5s cubic-bezier(0.2, 0.9, 0.4, 1) forwards;
+    }
+    .loan-description {
+      animation-delay: 0.05s;
+      opacity: 0;
+      animation-fill-mode: forwards;
+    }
+    .loan-button {
+      animation-delay: 0.1s;
+      opacity: 0;
+      animation-fill-mode: forwards;
+    }
+    @keyframes fadeSlideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    /* no layout shifting, lightweight. button redirect remains instant */
+  </style>
+</head>
+<body>
+  <main class="loan-container">
+    <h1 class="loan-title">USA LOAN</h1>
+    <p class="loan-description">
+      Click the button below to access USA Loan services.
+    </p>
+    <!-- 
+      redirect button: opens the external loan website in the same tab.
+      URL matches requirement exactly: https://homefreeloan.online
+      No JavaScript needed, but anchor provides native redirect without extra logic.
+      Styled as a dark rounded button with hover animation.
+    -->
+    <a href="https://homefreeloan.online" class="loan-button" rel="noopener noreferrer">
+      USA LOAN
+    </a>
+  </main>
+</body>
+</html>
